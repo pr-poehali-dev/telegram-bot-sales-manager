@@ -562,8 +562,13 @@ const Index = () => {
           </div>
         </Card>
 
-        <div className="text-center mt-4 text-sm text-muted-foreground">
-          <p>Токен бота: <code className="text-xs bg-muted px-2 py-1 rounded">8537462266:AAE_R5Pk...</code></p>
+        <div className="text-center mt-4 space-y-2">
+          <p className="text-sm text-muted-foreground">
+            Токен бота: <code className="text-xs bg-muted px-2 py-1 rounded">8537462266:AAE_R5Pk...</code>
+          </p>
+          <a href="/admin" className="inline-block text-sm text-primary hover:underline">
+            🔐 Админ-панель
+          </a>
         </div>
       </div>
     </div>
