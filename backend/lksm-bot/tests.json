@@ -1,0 +1,45 @@
+{
+  "tests": [
+    {
+      "name": "Test /start command",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "message": {
+          "message_id": 1,
+          "from": {
+            "id": 123456789,
+            "is_bot": false,
+            "first_name": "Иван",
+            "last_name": "Иванов",
+            "username": "ivanov"
+          },
+          "chat": {
+            "id": 123456789,
+            "type": "private"
+          },
+          "date": 1640000000,
+          "text": "/start"
+        }
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "ok": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test webhook ping",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "update_id": 123456
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "ok": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
